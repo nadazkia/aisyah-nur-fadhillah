@@ -14,6 +14,10 @@ let infoImg = info.querySelector('img');
 let infoP = infoDiv.querySelector('p');
 let infoH1 = infoDiv.querySelector('h1');
 
+document.addEventListener("DOMContentLoaded", () => {
+    var audio = new Audio('senandung-ukhuwah.ogg');
+    audio.play();
+});
 
 function active(i) {
     let itemNavbar = [itemHouse, itemYours, itemGallery, itemInfo];
@@ -32,7 +36,6 @@ function animation(i) {
         for (const item of itemAnimation) {
             item.style.animation = ''; //item selain i
         }
-        console.log(itemAnimation)
     }
 }
 
@@ -47,6 +50,7 @@ itemGallery.addEventListener('click', () => {
     active(2);
     galleryDiv.style.animation = 'munculTotal 1s ease-in-out 1';
     animation(1);
+
 })
 itemInfo.addEventListener('click', () => {
     itemInfo.classList.add('active');
