@@ -145,6 +145,15 @@ section {
   animation: typing 3s steps(50, end) forwards;
   animation-delay: 1s;
 }
+#home p:last-child {
+  width: 0%;
+  font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3s steps(50, end) forwards;
+  animation-delay: 3s;
+}
 /* ----- HOME END ----- */
 
 /* ----- YOURS START ----- */
