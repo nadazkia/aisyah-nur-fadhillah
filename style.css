@@ -237,8 +237,8 @@ section {
 }
 #yours .text {
   overflow-y: scroll;
-  margin: 0 8vh 8vh;
-  padding: 8vh 8vh;
+  /* margin: 0 8vh 8vh; */
+  padding: 0 6vh 6vh;
   border-radius: 2em;
   height: 70vh;
   /* background-color: rgb(255, 255, 255); */
@@ -411,6 +411,9 @@ button:hover {
 }
 
 @media screen and (max-width: 600px) {
+  .modal-content {
+    padding: 2em;
+  }
   .modal-content h3 {
     font-size: 15px;
     margin-bottom: 1.5em;
