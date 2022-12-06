@@ -36,12 +36,31 @@
   }
 }
 
+* {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  quotes: none;
+  text-decoration: unset;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+html {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  /* height: 480px;
+  width: 320px; */
+}
+
 body {
   font-family: "Poppins", "Quicksand", "Lora", sans-serif;
   box-sizing: border-box;
-  overflow-y: hidden;
-  margin: 0;
+  overflow: hidden;
+  margin: 0 auto;
   padding: 0;
+  position: relative;
 }
 
 h1,
@@ -57,26 +76,31 @@ a {
 }
 
 /* ----- NAVBAR START ----- */
-#navbar {
-  display: block;
-  position: fixed;
-  bottom: 0px;
+header {
+  margin: auto;
+  display: flex;
+  color: rgb(102, 14, 14);
+  background-color: brown;
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+#navbar {
+  display: flex;
+  position: fixed;
+  bottom: 0px;
   height: 16vh;
-  width: 100%;
-  /* background-color: aqua; */
 }
 
 nav {
-  overflow: hidden;
   display: flex;
+  /* overflow: hidden; */
+  /* justify-content: center; */
+  /* width: fit-content; */
   text-align: center;
-  justify-content: center;
   padding: 0.4em 0.8em 0;
   margin: auto;
-  width: fit-content;
   background-color: white;
   border-radius: 1em;
 }
@@ -100,7 +124,12 @@ nav a:hover {
   border-radius: 3em 3em 0 0;
   animation: hoverNav 300ms ease-in-out forwards;
 }
-
+nav a.active,
+nav a:first-child.active {
+  color: white;
+  background-color: rgb(134, 60, 0);
+  border-radius: 3em 3em 0 0;
+}
 /* ----- NAVBAR END ----- */
 
 /* ----- HOME START ----- */
@@ -123,6 +152,7 @@ section {
   text-align: center;
   justify-content: center;
   color: white;
+  padding: 20px;
 }
 #home h1 {
   transform: scale(0%);
@@ -154,10 +184,6 @@ section {
 /* ----- HOME END ----- */
 
 /* ----- YOURS START ----- */
-
-#yours.active {
-  display: flex;
-}
 #yours {
   /* display: none; */
   display: flex;
@@ -172,12 +198,11 @@ section {
   text-align: center;
   font-style: italic;
   margin-bottom: 15px;
-  font-size: 20px;
 }
 #yours p {
-  font-size: 12px;
+  font-size: 15px;
   text-align: justify;
-  margin: auto;
+  margin: 0 2em;
   margin-bottom: 15px;
 }
 
@@ -206,8 +231,8 @@ section {
 }
 #info img {
   transform: scale(95%);
-  width: 20%;
-  margin: 2em;
+  width: 15%;
+  margin: 2em 2em 0;
 }
 
 #info img:hover {

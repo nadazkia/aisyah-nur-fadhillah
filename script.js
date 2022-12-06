@@ -8,6 +8,9 @@ const info = document.getElementById('info')
 
 itemYours.addEventListener('click', () => {
     const yoursDiv = yours.querySelector('div');
+    itemYours.classList.add('active');
+    itemHouse.classList.remove('active');
+    itemInfo.classList.remove('active');
     yoursDiv.style.animation = 'munculTotal 1s ease-in-out 1';
     let infoDiv = info.querySelector('div');
     let infoP = infoDiv.querySelector('p');
@@ -19,6 +22,9 @@ itemYours.addEventListener('click', () => {
     infoImg.style.animation = '';
 })
 itemInfo.addEventListener('click', () => {
+    itemInfo.classList.add('active');
+    itemYours.classList.remove('active');
+    itemHouse.classList.remove('active');
     let infoDiv = info.querySelector('div');
     let infoImg = info.querySelector('img');
     let infoP = infoDiv.querySelector('p');
