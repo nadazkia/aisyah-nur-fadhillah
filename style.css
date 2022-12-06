@@ -287,6 +287,12 @@ section {
 }
 
 @media screen and (max-width: 600px) {
+  #yours .bar ul {
+    font-size: 10px;
+  }
+  #yours .bar li {
+    border: 2px solid rgb(134, 60, 0);
+  }
   #yours h1 {
     font-size: 15px;
   }
@@ -402,5 +408,19 @@ button:hover {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .modal-content h3 {
+    font-size: 15px;
+    margin-bottom: 1.5em;
+  }
+  .modal-content p {
+    font-size: 10px;
+  }
+  button {
+    font-size: 9px;
+    padding: 0.6em 1em;
+  }
 }
 /* ----- MODAL END ----- */
