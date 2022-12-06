@@ -39,9 +39,9 @@
 body {
   font-family: "Poppins", "Quicksand", "Lora", sans-serif;
   box-sizing: border-box;
+  overflow: hidden;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 h1,
