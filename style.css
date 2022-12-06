@@ -14,6 +14,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(105, 47, 0);
 }
+:fullscreen {
+  background-color: aqua;
+}
 
 @keyframes hoverNav {
   0% {
@@ -200,30 +203,87 @@ section {
 #yours {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0 3em;
-  color: rgb(255, 255, 255);
-  /* background-color: aqua; */
 }
 #yours div {
-  margin: 8vh auto;
+  margin: auto;
+  overflow: hidden;
+}
+#yours .bar {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  flex-direction: column;
+  /* overflow: hidden; */
+  /* background-color: black; */
+}
+#yours .bar ul {
+  display: flex;
+  padding: 8vh 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aqua; */
+}
+#yours .bar li {
+  cursor: pointer;
+  color: white;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 3px solid rgb(134, 60, 0);
+  border-radius: 0.8em;
+}
+#yours .bar li:hover {
+  background-color: rgba(255, 255, 255, 0.103);
+}
+#yours .text {
   overflow-y: scroll;
-  /* background-color: rgb(255, 255, 255); */
+  margin: 0 8vh 8vh;
   padding: 8vh 8vh;
   border-radius: 2em;
+  height: 70vh;
+  /* background-color: rgb(255, 255, 255); */
   /* box-shadow: 1px 3px 17px 2px rgb(0, 0, 0, 0.1); */
 }
-
-#yours h1 {
+#opening h1 {
   font-size: 30px;
   text-align: center;
   font-style: italic;
   margin-bottom: 15px;
 }
 #yours p {
-  text-indent: 2em;
-  font-size: 20px;
+  /* text-indent: 2em; */
+  font-size: 18px;
   text-align: justify;
+}
+
+.kutipan {
+  font-style: italic;
+  /* font-size: 14px !important; */
+}
+/* #opening, */
+#sekelumit,
+#ditinggalkan,
+#bahagia,
+#bersalah {
+  display: none;
+  flex-direction: column;
+  padding: 3em 0 0;
+  overflow: hidden;
+  margin: auto;
+  /* height: 70vh; */
+}
+
+#yours #ttd {
+  padding: 2em 0;
+  text-align: right;
+  overflow-y: hidden;
+}
+#yours #ttd p {
+  text-align: right;
+}
+#yours #ttd img {
+  margin: 1em;
+  width: 20%;
 }
 
 @media screen and (max-width: 600px) {
@@ -232,6 +292,14 @@ section {
   }
   #yours p {
     font-size: 10px;
+  }
+  .kutipan {
+    font-style: italic;
+    font-size: 12px;
+  }
+  #yours #ttd img {
+    margin: 1em;
+    width: 10%;
   }
 }
 /* ----- YOURS END ----- */
@@ -268,3 +336,71 @@ section {
 }
 
 /* ----- INFO END ----- */
+
+/* ----- MODAL START ----- */
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  /* animation: munculTotal 1s ease-in-out 1; */
+}
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 3em;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+  border-radius: 2em;
+  animation: munculTotal 0.5s ease-in-out 1 alternate;
+  -webkit-animation: munculTotal 0.5s ease-in-out 1 alternate;
+}
+.modal-content h3 {
+  text-align: justify;
+  margin-bottom: 1.5em;
+}
+.modal-content p {
+  text-align: justify;
+  margin-bottom: 1.2em;
+}
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 0.6em;
+  padding: 1em 2em;
+  color: white;
+  background-color: rgb(134, 60, 0);
+  -webkit-border-radius: 0.6em;
+  -moz-border-radius: 0.6em;
+  -ms-border-radius: 0.6em;
+  -o-border-radius: 0.6em;
+}
+button:hover {
+  background-color: rgb(105, 47, 0);
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* ----- MODAL END ----- */

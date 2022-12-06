@@ -14,31 +14,43 @@ let infoImg = info.querySelector('img');
 let infoP = infoDiv.querySelector('p');
 let infoH1 = infoDiv.querySelector('h1');
 
+
+function active(i) {
+    let itemNavbar = [itemHouse, itemYours, itemGallery, itemInfo];
+    if (itemNavbar[i].classList.contains('active') == true) {
+        itemNavbar.splice(i, 1); //Mengurangi item ke i 
+        for (const item of itemNavbar) {
+            item.classList.remove('active') //item selain i
+        }
+    }
+}
+
+function animation(i) {
+    let itemAnimation = [yoursDiv, galleryDiv, infoP, infoH1, infoImg]
+    if (itemAnimation[i].style.animation != '') {
+        itemAnimation.splice(i, 1); //Mengurangi item ke i 
+        for (const item of itemAnimation) {
+            item.style.animation = ''; //item selain i
+        }
+        console.log(itemAnimation)
+    }
+}
+
 itemYours.addEventListener('click', () => {
     itemYours.classList.add('active');
-    itemHouse.classList.remove('active');
-    itemGallery.classList.remove('active');
-    itemInfo.classList.remove('active');
+    active(1);
     yoursDiv.style.animation = 'munculTotal 1s ease-in-out 1';
-    galleryDiv.style.animation = '';
-    infoP.style.animation = '';
-    infoH1.style.animation = '';
-    infoH1.style.animationDelay = ''
-    infoImg.style.animation = '';
+    animation(0);
 })
 itemGallery.addEventListener('click', () => {
     itemGallery.classList.add('active');
-    itemHouse.classList.remove('active');
-    itemYours.classList.remove('active');
-    itemInfo.classList.remove('active');
+    active(2);
     galleryDiv.style.animation = 'munculTotal 1s ease-in-out 1';
-    yoursDiv.style.animation = '';
+    animation(1);
 })
 itemInfo.addEventListener('click', () => {
     itemInfo.classList.add('active');
-    itemHouse.classList.remove('active');
-    itemYours.classList.remove('active');
-    itemGallery.classList.remove('active');
+    active(3)
     infoP.style.animation = 'munculTotal 1s ease-in-out 1';
     infoImg.style.animation = 'munculTotal 1s ease-in-out 1';
     infoH1.style.animation = 'munculTotal 1s ease-in-out 1, kedut 1s ease-in-out infinite alternate';
@@ -49,4 +61,47 @@ itemInfo.addEventListener('click', () => {
 
 infoImg.addEventListener('mouseover', () => {
     infoImg.style.animation = 'kedut 0.5s ease-in-out alternate-reverse infinite';
+})
+
+const bars = document.querySelectorAll('.bar ul li')
+const modalSekelumit = document.getElementById("modal-sekelumit"),
+    modalDitinggalkan = document.getElementById('modal-ditinggalkan'),
+    modalBahagia = document.getElementById('modal-bahagia'),
+    modalBersalah = document.getElementById('modal-bersalah');
+const buttonClose = document.querySelectorAll('button');
+
+// When the user clicks the button, open the modal 
+bars[0].addEventListener('click', () => {
+    modalSekelumit.style.display = "block";
+})
+bars[1].addEventListener('click', () => {
+    modalDitinggalkan.style.display = "block";
+})
+bars[2].addEventListener('click', () => {
+    modalBahagia.style.display = "block";
+})
+bars[3].addEventListener('click', () => {
+    modalBersalah.style.display = "block";
+})
+for (const itemBtnClose of buttonClose) {
+    itemBtnClose.addEventListener('click', () => {
+        modalSekelumit.style.display = "none";
+        modalDitinggalkan.style.display = "none";
+        modalBahagia.style.display = "none";
+        modalBersalah.style.display = "none";
+    })
+}
+window.addEventListener('click', (event) => {
+    if (event.target == modalSekelumit) {
+        modalSekelumit.style.display = "none";
+    }
+    if (event.target == modalDitinggalkan) {
+        modalDitinggalkan.style.display = "none";
+    }
+    if (event.target == modalBahagia) {
+        modalBahagia.style.display = "none";
+    }
+    if (event.target == modalBersalah) {
+        modalBersalah.style.display = "none";
+    }
 })
