@@ -39,7 +39,7 @@
 body {
   font-family: "Poppins", "Quicksand", "Lora", sans-serif;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-y: hidden;
   margin: 0;
   padding: 0;
 }
@@ -74,25 +74,25 @@ nav {
   display: flex;
   text-align: center;
   justify-content: center;
-  padding: 10px 20px 0;
+  padding: 0.4em 0.8em 0;
   margin: auto;
   width: fit-content;
   background-color: white;
   border-radius: 1em;
 }
 nav a {
-  margin: 0 2px;
-  padding: 10px;
+  margin: 0 1px;
+  padding: 0.4em;
   color: rgb(134, 60, 0);
 }
 .fa-solid {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 h6 {
-  font-size: x-small;
+  font-size: 0.55em;
   font-weight: 400;
-  padding-bottom: 8px;
+  padding-bottom: 0.2em;
 }
 
 nav a:hover {
@@ -123,9 +123,6 @@ section {
   text-align: center;
   justify-content: center;
   color: white;
-  /* margin: 0 4em;
-  height: 100%; */
-  /* background-color: aqua; */
 }
 #home h1 {
   transform: scale(0%);
@@ -165,14 +162,14 @@ section {
   /* display: none; */
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
-  padding: 0 10%;
+  padding: 0 3em;
   color: white;
   /* background-color: aqua; */
 }
 
 #yours h1 {
+  text-align: center;
   font-style: italic;
   margin-bottom: 15px;
   font-size: 20px;
@@ -180,33 +177,41 @@ section {
 #yours p {
   font-size: 12px;
   text-align: justify;
-  overflow: hidden;
-  margin: 0 auto;
+  margin: auto;
   margin-bottom: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  #yours h1 {
+    font-size: 15px;
+  }
+  #yours p {
+    font-size: 10px;
+  }
 }
 /* ----- YOURS END ----- */
 
 /* ----- INFO START ----- */
-#info.active {
-  display: flex;
-}
 #info {
-  /* display: none; */
   display: flex;
   flex-direction: column;
-  text-align: center;
+}
+#info div {
   justify-content: center;
+  text-align: center;
   color: white;
+  font-size: 0.8em;
+  margin: auto;
   /* background-color: aqua; */
 }
-#yours h1 {
-  font-style: italic;
-  margin-bottom: 15px;
+#info img {
+  transform: scale(95%);
+  width: 20%;
+  margin: 2em;
 }
-#yours p {
-  text-align: justify;
-  overflow: hidden;
-  margin: 0 auto;
-  margin-bottom: 15px;
+
+#info img:hover {
+  animation: kedut 0.5s ease-in-out alternate-reverse infinite;
 }
+
 /* ----- INFO END ----- */
