@@ -43,7 +43,7 @@ function animation(i) {
 }
 
 let btnAwal = document.querySelectorAll('button')[0];
-let homeDivs = home.querySelectorAll('div')
+let homeDivs = document.querySelectorAll('.home-content div')
 function start() {
     navbar.style.display = 'flex';
     navbar.style.animation = 'munculTotal 1s ease-in-out 1';

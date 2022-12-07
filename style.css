@@ -69,8 +69,8 @@ html {
   display: flex;
   justify-content: center;
   margin: auto;
-  /* height: 480px;
-  width: 320px; */
+  height: 480px;
+  /* width: 320px; */
 }
 
 body {
@@ -173,6 +173,10 @@ section {
   justify-content: center;
   color: white;
   padding: 20px;
+}
+
+#home .home-content {
+  margin: auto auto 5em auto;
 }
 #home h1 {
   transform: scale(0%);
