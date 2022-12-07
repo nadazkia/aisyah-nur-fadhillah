@@ -303,6 +303,9 @@ section {
 }
 
 @media screen and (max-width: 600px) {
+  #yours .bar {
+    padding: 3vh 0 5vh;
+  }
   #yours .bar ul {
     font-size: 10px;
   }
