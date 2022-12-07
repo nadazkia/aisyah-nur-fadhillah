@@ -185,4 +185,3 @@ function launchFullScreen(element) {
         element.webkitRequestFullScreen();
     }
 }
-// window.location.reload('http://nadazkia.github.io/aisyah-nur-fadhillah');
