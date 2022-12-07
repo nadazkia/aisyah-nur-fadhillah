@@ -211,22 +211,24 @@ section {
 #yours {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
 }
 #yours div {
-  margin: auto;
+  /* margin: 4vh auto; */
   overflow: hidden;
 }
 #yours .bar {
   display: flex;
   position: sticky;
   top: 0px;
+  padding: 5vh 0 7vh;
   flex-direction: column;
   /* overflow: hidden; */
   /* background-color: black; */
 }
 #yours .bar ul {
   display: flex;
-  padding: 8vh 0;
   text-align: center;
   align-items: center;
   justify-content: center;
