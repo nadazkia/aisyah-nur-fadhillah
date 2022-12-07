@@ -176,7 +176,7 @@ section {
 }
 
 #home .home-content {
-  margin: auto auto 5em auto;
+  margin: 0 auto 5em;
 }
 #home h1 {
   transform: scale(0%);
