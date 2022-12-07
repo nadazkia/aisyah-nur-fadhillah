@@ -57,25 +57,32 @@ btnAwal.addEventListener('click', () => {
     play()
     launchFullScreen(document.documentElement); // the whole page
 })
-
+let video = document.querySelector('video');
+let youtube = document.querySelector('iframe');
 
 itemHouse.addEventListener('click', () => {
     for (const homeDiv of homeDivs) {
         homeDiv.style.animation = 'munculTotal 1s ease-in-out 1';
     }
     start()
+    video.pause();
+    youtube.onpause();
 })
 itemYours.addEventListener('click', () => {
     itemYours.classList.add('active');
     active(1);
     yoursDiv.style.animation = 'munculTotal 1s ease-in-out 1';
     animation(0);
+    video.pause();
+    youtube.onpause();
+
 })
 itemGallery.addEventListener('click', () => {
     itemGallery.classList.add('active');
     active(2);
     galleryDiv.style.animation = 'munculTotal 1s ease-in-out 1';
     animation(1);
+
 })
 itemInfo.addEventListener('click', () => {
     itemInfo.classList.add('active');
@@ -86,6 +93,8 @@ itemInfo.addEventListener('click', () => {
     infoH1.style.animationDelay = '0s, 1s'
     yoursDiv.style.animation = '';
     galleryDiv.style.animation = '';
+    video.pause();
+    youtube.onpause();
 })
 
 infoImg.addEventListener('mouseover', () => {
@@ -165,13 +174,12 @@ function showSlides(n) {
     audio.volume = '1'
 }
 
-let video = document.querySelector('video');
-let youtube = document.querySelector('iframe');
 
-video.addEventListener('mouseenter', () => {
+
+video.addEventListener('click', () => {
     audio.volume = '0.1'
 })
-youtube.addEventListener('mouseenter', () => {
+youtube.addEventListener('click', () => {
     audio.volume = '0.07'
 })
 
