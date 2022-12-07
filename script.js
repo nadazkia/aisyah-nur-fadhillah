@@ -65,6 +65,7 @@ itemHouse.addEventListener('click', () => {
         homeDiv.style.animation = 'munculTotal 1s ease-in-out 1';
     }
     start()
+    active(0);
     video.pause();
     youtube.onpause();
 })
@@ -180,7 +181,7 @@ video.addEventListener('click', () => {
     audio.volume = '0.1'
 })
 youtube.addEventListener('click', () => {
-    audio.volume = '0.07'
+    audio.volume = '0.08'
 })
 
 // Find the right method, call on correct element
