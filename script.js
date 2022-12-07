@@ -1,3 +1,4 @@
+const navbar = document.getElementById('navbar')
 const itemHouse = document.querySelectorAll('a')[0]
 const itemYours = document.querySelectorAll('a')[1]
 const itemGallery = document.querySelectorAll('a')[2]
@@ -14,10 +15,12 @@ let infoImg = info.querySelector('img');
 let infoP = infoDiv.querySelector('p');
 let infoH1 = infoDiv.querySelector('h1');
 
-document.addEventListener("DOMContentLoaded", () => {
-    var audio = new Audio('senandung-ukhuwah.ogg');
+const audio = document.querySelector("audio");
+function play() {
+    audio.pause();
+    audio.loop = true;
     audio.play();
-});
+}
 
 function active(i) {
     let itemNavbar = [itemHouse, itemYours, itemGallery, itemInfo];
@@ -39,6 +42,28 @@ function animation(i) {
     }
 }
 
+let btnAwal = document.querySelectorAll('button')[0];
+let homeDivs = home.querySelectorAll('div')
+function start() {
+    navbar.style.display = 'flex';
+    navbar.style.animation = 'munculTotal 1s ease-in-out 1';
+    homeDivs[1].removeAttribute('hidden');
+    btnAwal.style.animation = 'munculTotal 1s ease-in-out 1 reverse forwards';
+    btnAwal.style.display = 'none';
+}
+
+btnAwal.addEventListener('click', () => {
+    start()
+    play()
+})
+
+
+itemHouse.addEventListener('click', () => {
+    for (const homeDiv of homeDivs) {
+        homeDiv.style.animation = 'munculTotal 1s ease-in-out 1';
+    }
+    start()
+})
 itemYours.addEventListener('click', () => {
     itemYours.classList.add('active');
     active(1);
@@ -50,7 +75,6 @@ itemGallery.addEventListener('click', () => {
     active(2);
     galleryDiv.style.animation = 'munculTotal 1s ease-in-out 1';
     animation(1);
-
 })
 itemInfo.addEventListener('click', () => {
     itemInfo.classList.add('active');
@@ -108,4 +132,44 @@ window.addEventListener('click', (event) => {
     if (event.target == modalBersalah) {
         modalBersalah.style.display = "none";
     }
+})
+
+
+//  SLIDE
+const slides = document.getElementsByClassName("mySlides");
+const dots = document.getElementsByClassName("dot");
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    audio.volume = '1'
+}
+
+let video = document.querySelector('video');
+let youtube = document.querySelector('iframe');
+
+video.addEventListener('mouseenter', () => {
+    audio.volume = '0.1'
+})
+youtube.addEventListener('mouseenter', () => {
+    audio.volume = '0.07'
 })

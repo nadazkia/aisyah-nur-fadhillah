@@ -6,22 +6,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aisyah Nur Fadhilah</title>
 <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="icon-nads-lg.png">
 
 <body>
+    <audio loop>
+        <source src="senandung-ukhuwah.ogg" type="audio/ogg">
+        <source src="senandung-ukhuwah.mp3" type="audio/mpeg">
+    </audio>
     <header>
         <div id="navbar">
             <nav>
-                <a href="index.html" class="active">
+                <a href="#" class="active">
                     <i class="fa-solid fa-house"></i>
                     <h6>Home</h6>
                 </a>
                 <a href="#yours">
                     <i class="fa-solid fa-heart"></i>
-                    <!-- <i class="fa-solid fa-envelope"></i> -->
                     <h6>Yours</h6>
                 </a>
                 <a href="#gallery">
-                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-camera"></i>
                     <h6>Gallery</h6>
                 </a>
                 <a href="#info">
@@ -33,11 +37,16 @@
     </header>
     <main>
         <section id="home">
-            <h1>AISYAH NUR FADHILLAH</h1>
-            <p>Berisi ukiran rasa yang belum pernah</p>
-            <p>terungkap sebelumnya</p>
-            <br><br><br>
-            <p>Dibuat khusus untukmu:)</p>
+            <div>
+                <h1>AISYAH NUR FADHILLAH</h1>
+                <Button> Isinya apaan ?</Button>
+            </div>
+            <div hidden>
+                <p>Berisi ukiran rasa yang belum pernah</p>
+                <p>terungkap sebelumnya</p>
+                <br><br><br>
+                <p>Dibuat khusus untukmu:)</p>
+            </div>
         </section>
         <section id="yours">
             <div>
@@ -61,7 +70,7 @@
                             atau
                             justru
                             menguntungkan, tapi apapun itu.. semoga Allah selalu bersama, dan iman selalu terjaga.
-                        </p> <br>
+                        </p>
                         <p>Karena kata Imam Al Ghazali:</p>
                         <p class="kutipan">
                             "Segala sesuatu yang ditakdirkan untukmu akan sampai kepadamu meskipun jaraknya
@@ -84,7 +93,6 @@
                             tidak ingin, kita akan
                             berada di salah satu posisi itu, ca.
                         </p>
-                        <br>
                         <p>
                             Aku juga tau ini menyedihkan. Kehilangan orang-orang yang kita sayang, sahabat-sahabat yang
                             dulunya
@@ -108,16 +116,14 @@
                             untuk
                             memikirkan hal lain. Tapi apa? Seperti tidak berguna.
                         </p>
-                        <br>
                         <p>
-                            Banyak hal yang membuat aku takut. Aku mmeikirkan keluarga aku. Ya, aku sadar. Aku selalu
+                            Banyak hal yang membuat aku takut. Aku memikirkan keluarga aku. Ya, aku sadar. Aku selalu
                             merasa
                             amat tersakiti ketika ditinggal
                             oleh orang-orang yang aku sayang. Sekalipun mungkin saja orang itu tidak menyayangiku. Aku
                             bisa
                             merenung berhari-hari hanya karena ditinggalkan. Harusnya aku percaya akan takdir, bukan?
                         </p>
-                        <br>
                         <p>
                             Kamu sudah wisuda, sebentar lagi disusul sama Dawi, dan Aci. Bukan tidak bahagia. Aku hanya
                             merasa
@@ -139,7 +145,6 @@
                             berjuang
                             menyelesaikan target-target peserta.
                         </p>
-                        <br>
                         <p>
                             Saat hampir pulang dari sana, tanpa sadar aku bertemu dengan seorang perempuan tangguh yang
                             sedang
@@ -149,7 +154,6 @@
                             sekali
                             rasanya mobilisasi peserta.
                         </p>
-                        <br>
                         <p>
                             Pulang dari sana, kita foto bersama. Tak sadar. Ukhuwah yang terjalin bisa sampai pada detik
                             ini.
@@ -157,7 +161,6 @@
                             lainnya.
                             Canda, Tawa, Susah, Senang, Bahagia semua aku rasa dalam lingkaran ini.
                         </p>
-                        <br>
                         <p>
                             Bisa dibilang kita jarang bertemu. Tapi ntah ada rasa yang tak bisa diungkapkan. Rasa saling
                             memiliki, saling mendoakan. Aku berharap semoga Allah jaga terus pertemanan ini hingga pada
@@ -178,7 +181,6 @@
                             terlalu
                             abstrak wkwk.
                         </p>
-                        <br>
                         <p>
                             Waktu sudah pasti akan berlalu. Termasuk semua rasa yang aku ukir dalam tulisan ini. Tapi
                             luka
@@ -189,7 +191,6 @@
                             menghilang. Aku khawatir itu karena ulah aku. Tapi kamu perlu tau,
                             aku gak ada niatan sama sekali. Aku minta maaf, ca.
                         </p>
-                        <br>
                         <p>
                             Aku juga bukan orang yang peka. Aku cukup rumit memahami karakter kamu. Aku minta maaf tidak
                             menuliskan surat saat ulang tahun yang ke 22. Semoga tidak kecewa. Aku juga tidak berjanji
@@ -211,12 +212,113 @@
             </div>
         </section>
         <section id="gallery">
-            <!-- <audio loop autoplay>
-                <source src="audio.ogg" type="audio/ogg">
-            </audio> -->
             <div>
                 <h1> GALLERY </h1>
-                <p>MASIH KOSONG</p>
+                <div class="gallery-content">
+                    <div class="content">
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <div class="numbertext">1 / 15</div>
+                                <img src="/assets/image0.jpg" style="object-position: 0, 2px ;">
+                                <div class="text">Foto ini untuk pertama kalinya</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">2 / 15</div>
+                                <img src="/assets/image1.jpg" style="object-position: 0, 2px ;">
+                                <div class="text">Foto ini untuk pertama kalinya</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">3 / 15</div>
+                                <img src="/assets/image2.jpg">
+                                <div class="text">Momen nunggu bus selesai diperbaiki</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">4 / 15</div>
+                                <img src="/assets/image3.jpg">
+                                <div class="text">Aku lupa ini kapan ya? Tapi warung itu udah tutup sekarang</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">5 / 15</div>
+                                <img src="/assets/image4.jpg">
+                                <div class="text">Di angkot menuju Kebun Raya Bogor</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">6 / 15</div>
+                                <img src="/assets/image5.jpg">
+                                <div class="text">Udah sampe yeay. Ini abis ujan-ujanan</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">7 / 15</div>
+                                <img src="/assets/image6.jpg">
+                                <div class="text">Nah ini mirip si kayak foto sebelumnya, tapi ini gaada akunya wkwk
+                                </div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">8 / 15</div>
+                                <img src="/assets/image7.jpg">
+                                <div class="text">Foto untuk buku pertamanya aci. Nginep juga di rumah Icha</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">9 / 15</div>
+                                <img src="/assets/image8.jpg">
+                                <div class="text">Ini foto buku keduanya Aci. Dawinya lagi demam</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">10 / 15</div>
+                                <img src="/assets/image9.jpg">
+                                <div class="text">Sampailah akhirnya memenuhi janji ke Rumah Aci </div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">11 / 15</div>
+                                <img src="/assets/image10.jpg">
+                                <div class="text">Difotoin sama abang-abang nya</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">12 / 15</div>
+                                <img src="/assets/image11.jpg">
+                                <div class="text">Yang ini boleh selfie sendiri</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">13 / 15</div>
+                                <img src="/assets/image12.jpg">
+                                <div class="text">Tibalah masanya pulang ke rumah</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">14 / 15</div>
+                                <iframe src="https://www.youtube.com/embed/hOLLKY5l7y4?autoplay=1"> Your
+                                    computer not
+                                    Support</iframe>
+                                <div class="text">Video Deep Talk sampai Surga</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="numbertext">15 / 15</div>
+                                <video src="/assets/video1.mp4" controls></video>
+                                <div class="text">Tambahan aja ini :D</div>
+                            </div>
+                            <div id="btnImage">
+                                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                                <a class="next" onclick="plusSlides(1)">❯</a>
+                            </div>
+                        </div>
+                        <div id="dot">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
+                            <span class="dot" onclick="currentSlide(7)"></span>
+                            <span class="dot" onclick="currentSlide(8)"></span>
+                            <span class="dot" onclick="currentSlide(9)"></span>
+                            <span class="dot" onclick="currentSlide(10)"></span>
+                            <span class="dot" onclick="currentSlide(11)"></span>
+                            <span class="dot" onclick="currentSlide(12)"></span>
+                            <span class="dot" onclick="currentSlide(13)"></span>
+                            <span class="dot" onclick="currentSlide(14)"></span>
+                            <span class="dot" onclick="currentSlide(15)"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="info">
@@ -269,7 +371,7 @@
                 memikirkan hal lain. Tapi apa? Seperti tidak berguna.
             </p>
             <p>
-                Banyak hal yang membuat aku takut. Aku mmeikirkan keluarga aku. Ya, aku sadar. Aku selalu
+                Banyak hal yang membuat aku takut. Aku memikirkan keluarga aku. Ya, aku sadar. Aku selalu
                 merasa
                 amat tersakiti ketika ditinggal
                 oleh orang-orang yang aku sayang. Sekalipun mungkin saja orang itu tidak menyayangiku. Aku

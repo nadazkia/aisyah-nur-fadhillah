@@ -30,6 +30,7 @@
 @keyframes munculTotal {
   0% {
     transform: scale(0%);
+    /* display: none; */
   }
   100% {
     transform: scale(100%);
@@ -80,7 +81,9 @@ body {
   padding: 0;
   position: relative;
 }
-
+audio {
+  display: none;
+}
 h1,
 h2,
 h3,
@@ -105,7 +108,7 @@ header {
 }
 
 #navbar {
-  display: flex;
+  display: none;
   position: fixed;
   bottom: 0px;
   margin: 2em;
@@ -154,6 +157,7 @@ main {
   color: white;
 }
 section {
+  margin: auto;
   height: 100vh;
   background-image: url(icha2.jpg);
   background-size: cover;
@@ -248,12 +252,18 @@ section {
   font-size: 30px;
   text-align: center;
   font-style: italic;
-  margin-bottom: 15px;
+  margin-bottom: 1em;
+}
+#yours h3 {
+  /* font-size: 30px; */
+  font-style: italic;
+  margin-bottom: 1em;
 }
 #yours p {
   /* text-indent: 2em; */
   font-size: 18px;
   text-align: justify;
+  margin-bottom: 1em;
 }
 
 .kutipan {
@@ -265,7 +275,7 @@ section {
 #ditinggalkan,
 #bahagia,
 #bersalah {
-  display: none;
+  display: flex;
   flex-direction: column;
   padding: 3em 0 0;
   overflow: hidden;
@@ -311,15 +321,6 @@ section {
 /* ----- YOURS END ----- */
 
 /* ----- GALLERY START ----- */
-#gallery {
-  display: flex;
-  flex-direction: column;
-  /* background-color: aqua; */
-}
-#gallery div {
-  margin: auto;
-  text-align: center;
-}
 /* ----- GALLERY END ----- */
 
 /* ----- INFO START ----- */
@@ -386,6 +387,7 @@ button {
   cursor: pointer;
   border-radius: 0.6em;
   padding: 1em 2em;
+  width: max-content;
   color: white;
   background-color: rgb(134, 60, 0);
   -webkit-border-radius: 0.6em;
@@ -395,6 +397,10 @@ button {
 }
 button:hover {
   background-color: rgb(105, 47, 0);
+}
+#home button {
+  animation: munculTotal 1s ease-in-out;
+  -webkit-animation: munculTotal 1s ease-in-out;
 }
 .close {
   color: #aaaaaa;
@@ -427,3 +433,155 @@ button:hover {
   }
 }
 /* ----- MODAL END ----- */
+
+/* ----- GALLERY START ----- */
+#gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  /* background-color: aqua; */
+}
+#gallery div {
+  margin: auto;
+  text-align: center;
+}
+#gallery .gallery-content {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+video {
+  height: 230px;
+  margin-bottom: 1em;
+}
+#gallery h1 {
+  margin-bottom: 1em;
+}
+
+#btnImage {
+  display: flex;
+}
+
+#gallery .mySlides {
+  display: block;
+}
+#gallery img,
+video {
+  vertical-align: middle;
+  width: 100%;
+  object-fit: cover;
+}
+#gallery iframe {
+  vertical-align: middle;
+  width: 400px;
+  height: 225px;
+}
+
+/* Slideshow container */
+#gallery .slideshow-container {
+  /* overflow: hidden; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  max-height: 230px;
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 3px;
+}
+
+/* Next & previous buttons */
+#gallery .prev,
+#gallery .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  /*transition: 0.6s ease;*/
+  border-radius: 0 3px 3px 0;
+  /* user-select: none; */
+}
+
+/* Position the "next button" to the right */
+#gallery .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+#gallery .prev:hover,
+#gallery .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+#gallery .text {
+  color: #f2f2f2;
+  font-size: 10px;
+  padding: 10px 12px;
+  position: absolute;
+  top: 25em;
+  width: 100%;
+  text-align: center;
+  /* background-color: rgba(0, 0, 0, 0.95); */
+}
+
+/* Number text (1/3 etc) */
+#gallery .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+#gallery .dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+#gallery .active,
+#gallery .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+/* ----- GALLERY END ----- */
