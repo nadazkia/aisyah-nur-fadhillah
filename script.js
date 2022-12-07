@@ -55,6 +55,7 @@ function start() {
 btnAwal.addEventListener('click', () => {
     start()
     play()
+    launchFullScreen(document.documentElement); // the whole page
 })
 
 
@@ -184,6 +185,5 @@ function launchFullScreen(element) {
         element.webkitRequestFullScreen();
     }
 }
-
+window.location = 'http://nadazkia.github.io/aisyah-nur-fadhillah'
 // Launch fullscreen for browsers that support it!
-launchFullScreen(document.documentElement); // the whole page
